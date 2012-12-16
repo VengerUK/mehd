@@ -1,0 +1,14 @@
+/*
+ * Welcome users when they enter the room.
+ */
+API.addEventListener(
+  API.USER_JOIN, 
+	function (user) {
+		API.sendChat('Welcome ' + user.username + ' to the room!');
+	}
+);
+
+
+var songPlayer = API.getDJs()[0].username;
+var songTitle = API.getMedia().title;
+var songAuthor = API.getMedia().author;
